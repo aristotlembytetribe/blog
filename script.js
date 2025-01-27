@@ -13,17 +13,17 @@ function createPost() {
     }
 }
 
-function updatePost(id) {
-    const post = document.querySelector(`.card[data-id='${id}']`);
-    const title = post.querySelector('.card-title').innerText;
-    const content = post.querySelector('.card-text').innerText;
+// function updatePost(id) {
+//     const post = document.querySelector(`.card[data-id='${id}']`);
+//     const title = post.querySelector('.card-title').innerText;
+//     const content = post.querySelector('.card-text').innerText;
 
-    fetch('blog.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `action=update&id=${id}&title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}`
-    }).then(() => alert('Post updated!'));
-}
+//     fetch('blog.php', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//         body: `action=update&id=${id}&title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}`
+//     }).then(() => alert('Post updated!'));
+// }
 
 function deletePost(id) {
     if (confirm('Are you sure you want to delete this post?')) {
